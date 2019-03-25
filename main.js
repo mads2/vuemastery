@@ -20,6 +20,8 @@ Vue.component('product', {
 		<p>Shipping: {{ shipping }}</p>
 
 		<p v-show="onSale">ON SALE!!!</p>
+		<p>{{printOnSale}}</p>
+
 
 		<ul>
 			<li v-for="detail in details">{{detail}}</li>
@@ -36,12 +38,10 @@ Vue.component('product', {
 			Cart</button>
 		<button v-on:click="remFromCart"> - </button>
 		</div>
-
+		
+		<div class="bottom">
 		<product-tabs :reviews="reviews"></product-tabs>
 
-		<div class="bottom">
-			<a :href="linkBuscador">Link</a>
-			<p>{{printOnSale}}</p>
 		</div>
 	</div>
 
